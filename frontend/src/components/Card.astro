@@ -1,0 +1,21 @@
+---
+interface Props {
+  title: string;
+  body: string;
+  href: string;
+}
+
+const { href, title, body } = Astro.props;
+---
+
+<li class="list-none flex p-[1px] bg-[#23262d] rounded-lg transition-all duration-150 ease-in-out shadow-[inset_0_0_0_1px_rgba(255,255,255,0.1)] hover:bg-gradient-to-r hover:from-[#6ee7b7] hover:to-[#3b82f6] focus-within:bg-gradient-to-r focus-within:from-[#6ee7b7] focus-within:to-[#3b82f6]">
+  <a href={href} class="w-full no-underline text-white opacity-80 hover:opacity-100 focus:opacity-100 p-6 rounded-lg bg-[#23262d] transition-all duration-150 ease-in-out">
+    <h2 class="m-0 text-xl transition-colors duration-150 ease-in-out hover:text-[#d1d5db] focus:text-[#d1d5db]">
+      {title}
+      <span>&rarr;</span>
+    </h2>
+    <p class="mt-2 mb-0">
+      {body}
+    </p>
+  </a>
+</li>
