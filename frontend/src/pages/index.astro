@@ -1,0 +1,19 @@
+---
+import Layout from "../layouts/Layout.astro";
+import VideoPlayer from '../components/VideoPlayer.astro';
+
+const videoUrl = '/video';
+---
+<Layout title="Welcome to ClipForge">
+  <main class="mx-auto p-4 w-full max-w-[800px] text-white text-lg leading-8">
+    <h1 class="text-8xl font-bold leading-none text-center mb-4">
+      Welcome to <span
+        class="text-transparent bg-clip-text bg-gradient-to-r from-[#6ee7b7] to-[#3b82f6]"
+        >ClipForge</span
+      >
+    </h1>
+    <section class="video-section my-8">
+      <VideoPlayer src={videoUrl} />
+    </section>
+  </main>
+</Layout>
